@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mylocation"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/listbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/time"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <TextView
+          android:layout_margin="5dp"
+            android:background="#14979797"
+            android:layout_width="1dp"
+            android:layout_height="match_parent" />
+        <RelativeLayout
+            android:padding="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/scheme"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/scheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/totalstations"
+                            android:gravity="left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+        </RelativeLayout>
+</LinearLayout>

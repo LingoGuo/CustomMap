@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/text1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="请选择交通工具"
+        android:textColor="#979797"
+        android:textSize="10dp"
+        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_below="@+id/text1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/selectItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:background="@drawable/drive_unselected"
+            android:id="@+id/drive"
+            android:layout_marginRight="10dp"
+            android:layout_width="40dp"
+            android:layout_height="30dp" />
+        <Button
+            android:background="@drawable/bus_unselected"
+            android:layout_toRightOf="@+id/drive"
+            android:layout_marginRight="10dp"
+            android:id="@+id/bus"
+            android:layout_width="40dp"
+            android:layout_height="30dp" />
+        <Button
+            android:background="@drawable/onfoot_unselected"
+            android:layout_toRightOf="@+id/bus"
+            android:id="@+id/onfoot"
+            android:layout_width="40dp"
+            android:layout_height="30dp"/>
+        <Button
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="搜索"
+            android:id="@+id/search"
+            android:gravity="center"
+            android:textColor="@drawable/button_textcolor"
+            android:background="@drawable/button_background"
+            android:layout_width="50dp"
+            android:layout_height="40dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:background="@drawable/backgroundbar"
+        android:layout_below="@+id/selectItems"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <ImageView
+            android:id="@+id/routeIcon"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/routeicon"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/routeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/green_dot"
+                    android:src="@drawable/green_dot"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+                <TextView
+                    android:text="输入起点"
+                    android:id="@+id/source"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#979797"
+                    android:layout_toRightOf="@+id/green_dot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="16dp"
+                android:background="#EDEDED"
+                android:id="@+id/line"
+                android:layout_below="@+id/layout2"
+                android:layout_width="300dp"
+                android:layout_height="1dp" />
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/line"
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/red_dot"
+                    android:src="@drawable/red_dot"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:text="输入终点"
+                    android:id="@+id/destination"
+                    android:textColor="#979797"
+                    android:layout_toRightOf="@+id/green_dot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <ListView
+        android:divider="#00000000"
+        android:layout_below="@+id/layout1"
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+</RelativeLayout>

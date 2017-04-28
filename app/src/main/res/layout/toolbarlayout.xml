@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <Button
+        android:layout_alignParentLeft="true"
+        android:text="取消"
+        android:background="#00000000"
+        style="@style/textviewattr"
+        android:id="@+id/navigationIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_centerInParent="true"
+        android:text="发微博"
+        android:textSize="21sp"
+        android:background="#00000000"
+        style="@style/textviewattr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_marginRight="8dp"
+        android:layout_alignParentRight="true"
+        android:background="#00000000"
+        style="@style/textviewattr"
+        android:text="发送"
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
